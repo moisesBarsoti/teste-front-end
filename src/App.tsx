@@ -4,9 +4,9 @@ import Header from './components/Header'
 
 function App() {
   return (
-    <div>
+    <div className="app-layout">
       <Header />
-      <main>
+      <main className="app-content">
         <Outlet />
       </main>
     </div>
