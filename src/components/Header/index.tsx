@@ -1,4 +1,4 @@
-import './index.css';
+import './index.scss';
 import ShieldCheck from "../../assets/icons/ShieldCheck.svg";
 import Truck from "../../assets/icons/Truck.svg";
 import CreditCard from "../../assets/icons/CreditCard.svg";
@@ -133,9 +133,9 @@ export default function Header() {
                     </li>
                     <li>
                         <Link
-                            to="/ofertasDoDia"
+                            to="/"
                             className={
-                                location.pathname === '/ofertasDoDia' 
+                                location.pathname === '/' 
                                 ? 'link link-ativo' 
                                 : 'link'
                             }
