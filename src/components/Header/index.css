@@ -13,6 +13,8 @@ header ul {
     list-style-type: none;
     gap: 119px;
     margin-top: 6px;
+    border-bottom: 1px solid var(--color-gray-F0F0F0);
+    padding-bottom: 6px;
 }
 
 header ul li {
@@ -31,10 +33,7 @@ header ul li span {
 .sectionLogo {
     display: flex;
     justify-content: space-between;
-    margin: 16px 0;
-    padding: 15px 0;
-    border-top: 1px solid var(--color-gray-F0F0F0);
-    border-bottom: 1px solid var(--color-gray-F0F0F0);
+    margin: 20px 0; 
 }
 
 .sectionLogo .pesquisa-wrapper {
@@ -67,10 +66,46 @@ header ul li span {
     display: flex;
     gap: 32px;
     list-style-type: none;
+    border-bottom: none;
 }
 
 .sectionLogo ul li button {
     background: transparent;
     border: none;
     cursor: pointer;
+}
+
+/* Navigation */
+
+nav {
+    border-top: 1px solid var(--color-gray-F0F0F0);
+    box-shadow: 2px 0 4px #3930131F;
+    font-size: 12px;
+    padding-top: 4px;
+}
+
+nav ul {
+    display: flex;
+    border-bottom: none;
+}
+
+nav ul li {
+    display: flex;
+}
+
+nav ul li .link {
+    font-size: 12px;
+    border-bottom: none;
+    color: var(--color-gray-9F9F9F);
+    text-decoration: none;
+}
+
+nav ul li .link figure {
+    display: flex;
+    gap: 12px;
+}
+
+nav ul li .link-ativo {
+    color: var(--color-blue-3019B2);
+    font-weight: 600;
 }

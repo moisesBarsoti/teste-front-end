@@ -8,8 +8,13 @@ import Caixa from "../../assets/icons/Caixa.svg";
 import Heart from "../../assets/icons/Heart.svg";
 import UserCircle from "../../assets/icons/UserCircle.svg";
 import ShoppingCart from "../../assets/icons/ShoppingCart.svg";
+import CrownSimple from "../../assets/icons/CrownSimple.svg";
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
+
+    const location = useLocation();
+
     return (
         <header aria-label="Cabeçalho da página">
             <ul>
@@ -27,9 +32,9 @@ export default function Header() {
                 </li>
             </ul>
             <div className="sectionLogo">
-                <span>
+                <Link to="/">
                     <img src={Logo} alt="Logo Econverse" />
-                </span>
+                </Link>
                 <div className="pesquisa-wrapper">
                     <input
                         type="text"
@@ -64,7 +69,98 @@ export default function Header() {
                     </li>
                 </ul>
             </div>
-            <nav></nav>
+            <nav> 
+                <ul>
+                    <li>
+                        <Link
+                        to="/todasCategorias"
+                        className={
+                            location.pathname === '/todasCategorias' 
+                            ? 'link link-ativo' 
+                            : 'link'
+                        }
+                        >
+                        TODAS CATEGORIAS
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/supermercado"
+                            className={
+                                location.pathname === '/supermercado' 
+                                ? 'link link-ativo' 
+                                : 'link'
+                            }
+                            >
+                            SUPERMERCADO
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/livros"
+                            className={
+                                location.pathname === '/livros' 
+                                ? 'link link-ativo' 
+                                : 'link'
+                            }
+                            >
+                            LIVROS
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/moda"
+                            className={
+                                location.pathname === '/moda' 
+                                ? 'link link-ativo' 
+                                : 'link'
+                            }
+                            >
+                            MODA
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/lancamentos"
+                            className={
+                                location.pathname === '/lancamentos' 
+                                ? 'link link-ativo' 
+                                : 'link'
+                            }
+                            >
+                            LANÇAMENTOS
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/ofertasDoDia"
+                            className={
+                                location.pathname === '/ofertasDoDia' 
+                                ? 'link link-ativo' 
+                                : 'link'
+                            }
+                            >
+                            OFERTAS DO DIA
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/assinatura"
+                            className={
+                                location.pathname === '/assinatura' 
+                                ? 'link link-ativo' 
+                                : 'link'
+                            }
+                            id="assinatura-link"
+                            >
+                            <figure>
+                                <img src={CrownSimple} alt="Icone CrownSimple" />
+                                <figcaption>Assinatura</figcaption>
+                            </figure>
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
         </header>
     )
 }
