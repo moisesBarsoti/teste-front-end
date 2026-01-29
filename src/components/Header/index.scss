@@ -1,12 +1,12 @@
 @import '../../variables.scss';
 
 header {
-  position: fixed;
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 0 80px;
   color: $color-gray-9F9F9F;
+  background-color: $color-white;
 
   ul {
     display: flex;
