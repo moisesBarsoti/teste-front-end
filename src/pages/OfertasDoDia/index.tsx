@@ -1,7 +1,9 @@
+import BannerBlackFriday from "../../components/BannerBlackFriday";
+
 export default function OfertasDoDia() {
     return (
-        <div>
-            <h1>Ofertas do Dia</h1>
-        </div>
+        <section>
+            <BannerBlackFriday />
+        </section>
     )
 }
