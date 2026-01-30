@@ -1,0 +1,44 @@
+@import '../../_variables.scss';
+
+.card-vitrine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    
+    .container-icon {
+        padding: 34px 34px 33px 33px;
+        background-color: $color-gray-F4F4F4;
+        box-shadow: 0 2px 9px rgba(0, 0, 0, .2);
+        border-radius: 10px;
+        transition: .5s ;
+        
+        .icon {
+            width: 61px;
+            height: 61px;
+        }
+    }
+    
+    .container-icon:hover {
+        background-color: darken($color-white, 10%);
+    }
+
+    .container-icon.ativo {
+        background-color: $color-white;
+    }
+    
+    .card-vitrine-span {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        color: $color-black-4E4E4E;
+    }
+
+    .card-vitrine-span.ativo {
+        color: $color-blue-3019B2;
+    }
+}
