@@ -32,13 +32,13 @@
     }
     
     .card-vitrine-span {
-        font-weight: 600;
         font-size: 14px;
         line-height: 100%;
         color: $color-black-4E4E4E;
     }
-
+    
     .card-vitrine-span.ativo {
+        font-weight: 600;
         color: $color-blue-3019B2;
     }
 }
