@@ -1,4 +1,5 @@
 import BannerBlackFriday from "../../components/BannerBlackFriday";
+import ProdutosRelacionados from "../../components/ProdutosRelacionados";
 import VitrineCategoria from "../../components/VitrineCategoria";
 
 export default function OfertasDoDia() {
@@ -6,6 +7,7 @@ export default function OfertasDoDia() {
         <section>
             <BannerBlackFriday />
             <VitrineCategoria />
+            <ProdutosRelacionados />
         </section>
     )
 }
