@@ -1,0 +1,73 @@
+@import '../../variables.scss';
+
+.card-produto {
+    margin-left: 10px;
+    padding: 17px 13.5px 16px 12.3px;
+    width: 304px;
+    border-radius: 10px;
+    background-color: $color-white;
+    box-shadow: 0px 4px 19px rgba(0, 0, 0, .1);
+
+    figure {
+
+        figcaption {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 100%;
+            color: $color-black-3F3F40;
+        }
+    }
+
+    .valores {
+        margin-top: 12px;
+
+        .valor-original {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 100%;
+            text-decoration: line-through;
+            color: $color-gray-808080;
+        }
+
+        .valor-desconto {
+            margin: 2px 0;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 100%;
+            color: $color-black-000000;
+        }
+
+        .parcelas {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 100%;
+            color: $color-black-3F3F40;
+        }
+
+        .frete {
+            margin-top: 7px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 100%;
+            color: $color-blue-3442B5;
+        }
+    }
+
+    button {
+        width: 100%;
+        margin-top: 12px;
+        padding: 14px 0 11px 0;
+        font-weight: 700;
+        font-size: 14px;
+        color: $color-white;
+        background-color: $color-blue-3442B5;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: .5s ease-in-out;
+    }
+    
+    button:hover {
+        background-color: darken($color-blue-3442B5, 6%);
+    }
+}
