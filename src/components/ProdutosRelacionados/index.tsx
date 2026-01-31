@@ -19,6 +19,10 @@ export default function ProdutosRelacionados() {
   const [tagAtivo, setTagAtivo] = useState(0);
   const [products, setProducts] = useState<Product[]>([]);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [modalAberto, setModalAberto] = useState(false);
+  const [produtoSelecionado, setProdutoSelecionado] = useState<Product | null>(null);
+  const [quantidade, setQuantidade] = useState(1);
+
 
   // Produtos do JSON   
   useEffect(() => {
@@ -61,8 +65,23 @@ export default function ProdutosRelacionados() {
   };
 
   // Quando clicar em comprar produto 
-  const handleComprar = (productName: string) => {
-    console.log('Comprar:', productName);
+  const handleComprar = (product: Product) => {
+    setProdutoSelecionado(product);
+    setModalAberto(true);
+  };
+
+  const fecharModal = () => {
+    setModalAberto(false);
+    setProdutoSelecionado(null);
+  };
+
+  // Aumentar e diminuir do contador
+  const aumentar = () => {
+    setQuantidade(prev => prev + 1);
+  };
+
+  const diminuir = () => {
+    setQuantidade(prev => (prev > 1 ? prev - 1 : 1));
   };
 
     return (
@@ -83,6 +102,7 @@ export default function ProdutosRelacionados() {
                  </Link>
             </nav>
             
+            {/* Cards */}
             <div className="conteudo-dinamico">
                  {slides.length > 0 ? (
                   <div className="carrossel-container">
@@ -108,7 +128,7 @@ export default function ProdutosRelacionados() {
                         valorDesconto={valorDesconto}
                         quntidadeParcelas={12}
                         valorParcela={valorParcela}
-                        onClickComprar={() => handleComprar(product.productName)}
+                        onClickComprar={() => handleComprar(product)}
                       />
                     );
                   })}
@@ -124,6 +144,45 @@ export default function ProdutosRelacionados() {
           <p>Nenhum produto para "{tagsTecnologia[tagAtivo]?.label}"</p>
         )}
       </div>
+
+      {/* Modal */}
+      {modalAberto && produtoSelecionado && (
+        <div className="modal-overlay" onClick={fecharModal}>
+          <div className="modal" onClick={e => e.stopPropagation()}>
+
+            <button className="modal-fechar" onClick={fecharModal}>✕</button>
+
+            <div className="img-produto">
+              <img src={produtoSelecionado.photo} alt={produtoSelecionado.productName} />
+            </div>
+
+            <div className="modal-info">
+              <h3>{produtoSelecionado.productName}</h3>
+              <p className="modal-preco">
+                R$ {produtoSelecionado.price.toLocaleString('pt-BR')}
+              </p>
+              <div className='modal-desc'>
+                <p>{produtoSelecionado.descriptionShort}</p>
+                <Link to="/" className='ver-produto'>
+                  Veja mais detalhes do produto ›
+                </Link>
+              </div>
+
+              <div className="modal-footer">
+                <div className="contador-quantidade">
+                  <button onClick={diminuir}>−</button>
+                  <span>{String(quantidade).padStart(2, '0')}</span>
+                  <button onClick={aumentar}>+</button>
+                </div>
+
+                <button className="modal-comprar">
+                  COMPRAR
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
         </div>
     )
 }
