@@ -1,0 +1,43 @@
+@import '../../variables.scss';
+
+.tags {
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        
+        li {
+            .button-tags {
+                background-color: $color-white;
+                color: $color-gray-3B3B3B;
+                font-size: 16px;
+                font-weight: 400;
+                border: 1px solid $color-gray-BDBDBD;
+                width: 214px;
+                padding: 6px 0;
+                transition: .3s ease-in-out;
+                cursor: pointer;
+
+                &-ativo {
+                    color: $color-blue-3442B5;
+                    font-weight: 700;
+                }
+            }
+            
+            #ver-todos {
+                color: $color-gray-3B3B3B;
+                padding: 3px 0;
+                text-decoration: none;
+                text-align: center;
+                display: inline-block;
+                font-weight: 500;
+            }
+
+            .button-tags:hover {
+                background-color: darken($color-gray-F6F5F2, 2%);
+            }
+
+             
+        }
+    }
+}
