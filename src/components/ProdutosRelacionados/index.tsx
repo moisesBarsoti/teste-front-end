@@ -15,7 +15,7 @@ interface Product {
   price: number;
 }
 
-export default function ProdutosRelacionados({verTodos = false}: ProdutosRelacionadosType) {
+export default function ProdutosRelacionados({verTodos = false, tags = true}: ProdutosRelacionadosType) {
 
   const [tagAtivo, setTagAtivo] = useState(0);
   const [products, setProducts] = useState<Product[]>([]);
@@ -88,20 +88,22 @@ export default function ProdutosRelacionados({verTodos = false}: ProdutosRelacio
     return (
         <div className="produtos-relacionados">
             <TituloAzul titulo='Produtos relacionados' link={verTodos} />
-            <nav className="tags-container">
-                {tagsTecnologia.map((tag, index) => (
-                <TagsTecnologia
-                    key={index}
-                    isAtivo={tagAtivo === index}
-                    onToggle={() => setTagAtivo(index)}
-                    texto={tag.label}
-                    title={tag.title}
-                />
-                ))}
-                <Link to="/produtos" className="ver-todos" title="Ver todos os produtos">
-                    VER TODOS
-                 </Link>
-            </nav>
+            {tags && (
+              <nav className="tags-container">
+                  {tagsTecnologia.map((tag, index) => (
+                  <TagsTecnologia
+                      key={index}
+                      isAtivo={tagAtivo === index}
+                      onToggle={() => setTagAtivo(index)}
+                      texto={tag.label}
+                      title={tag.title}
+                  />
+                  ))}
+                  <Link to="/produtos" className="ver-todos" title="Ver todos os produtos">
+                      VER TODOS
+                  </Link>
+              </nav>
+            )}
             
             {/* Cards */}
             <div className="conteudo-dinamico">
