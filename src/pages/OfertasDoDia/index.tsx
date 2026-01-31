@@ -14,7 +14,7 @@ export default function OfertasDoDia() {
                 <CardParceiro />
                 <CardParceiro />
             </div>
-            <ProdutosRelacionados verTodos={true} />
+            <ProdutosRelacionados verTodos={true} tags={false} />
         </section>
     )
 }
