@@ -6,6 +6,7 @@ import { tagsTecnologia } from '../../data/tagsTecnologia';
 import { Link } from 'react-router-dom';
 import CardProduto from '../CardProduto';
 import produtosData from '../../data/produtos.json';
+import type { ProdutosRelacionadosType } from '../../types/produtosRelacionados';
 
 interface Product {
   productName: string;
@@ -14,7 +15,7 @@ interface Product {
   price: number;
 }
 
-export default function ProdutosRelacionados() {
+export default function ProdutosRelacionados({verTodos = false}: ProdutosRelacionadosType) {
 
   const [tagAtivo, setTagAtivo] = useState(0);
   const [products, setProducts] = useState<Product[]>([]);
@@ -86,7 +87,7 @@ export default function ProdutosRelacionados() {
 
     return (
         <div className="produtos-relacionados">
-            <TituloAzul titulo='Produtos relacionados' link={false} />
+            <TituloAzul titulo='Produtos relacionados' link={verTodos} />
             <nav className="tags-container">
                 {tagsTecnologia.map((tag, index) => (
                 <TagsTecnologia
