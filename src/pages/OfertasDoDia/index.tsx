@@ -15,6 +15,10 @@ export default function OfertasDoDia() {
                 <CardParceiro />
             </div>
             <ProdutosRelacionados verTodos={true} tags={false} />
+            <div className="container-parceiros">
+                <CardParceiro />
+                <CardParceiro />
+            </div>
         </section>
     )
 }
