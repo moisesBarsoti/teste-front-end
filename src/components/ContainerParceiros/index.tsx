@@ -1,11 +1,11 @@
-import "./index.scss"
+import "./index.scss";
 import CardParceiro from "../CardParceiro";
 
 export default function ContainerParceiros() {
-    return (
-        <div className="container-parceiros">
-            <CardParceiro />
-            <CardParceiro />
-        </div>
-    )
+  return (
+    <div className="container-parceiros">
+      <CardParceiro direction="left" />
+      <CardParceiro direction="right" />
+    </div>
+  );
 }
