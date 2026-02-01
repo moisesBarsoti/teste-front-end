@@ -69,7 +69,7 @@ git clone https://github.com/moisesBarsoti/teste-front-end.git
 2. Acesse a pasta do projeto:
 
 ```bash
-cd econverse
+cd teste-front-end
 ```
 
 3. Instale as dependências:
@@ -146,3 +146,4 @@ Desenvolvedor de Software em formação - FIAP
 ## 📄 Licença
 
 Este projeto foi desenvolvido exclusivamente para fins educacionais e avaliação técnica.
+
