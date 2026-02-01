@@ -1,0 +1,15 @@
+@import '../../variables.scss';
+
+.direitos-autorais {
+    width: 100%;
+    background-color: $color-white;
+    padding: 13px 0 13.8px 0;
+    display: flex;
+    justify-content: center;
+
+    h6 {
+        color: $color-black-3F3F40;
+        font-size: 13px;
+        font-weight: 300;
+    }
+}
