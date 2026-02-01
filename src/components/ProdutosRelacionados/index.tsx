@@ -1,7 +1,7 @@
 import './index.scss';
 import TituloAzul from '../TituloAzul';
 import TagsTecnologia from '../TagsTecnologia';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { tagsTecnologia } from '../../data/tagsTecnologia';
 import { Link } from 'react-router-dom';
 import CardProduto from '../CardProduto';
@@ -23,6 +23,8 @@ export default function ProdutosRelacionados({verTodos = false, tags = true}: Pr
   const [modalAberto, setModalAberto] = useState(false);
   const [produtoSelecionado, setProdutoSelecionado] = useState<Product | null>(null);
   const [quantidade, setQuantidade] = useState(1);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const [visivel, setVisivel] = useState<boolean>(false);
 
 
   // Produtos do JSON   
@@ -85,8 +87,33 @@ export default function ProdutosRelacionados({verTodos = false, tags = true}: Pr
     setQuantidade(prev => (prev > 1 ? prev - 1 : 1));
   };
 
+  // Animação do Scrool
+  useEffect(() => {
+  if (!sectionRef.current) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setVisivel(true);
+        observer.unobserve(entry.target);
+      }
+    },
+    {
+      threshold: 0.3,
+      rootMargin: '0px 0px -200px 0px'
+    }
+  );
+
+    observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
     return (
-        <div className="produtos-relacionados">
+        <div 
+          ref={sectionRef}
+          className={`produtos-relacionados ${visivel ? 'ativo' : ''}`
+        }>
             <TituloAzul titulo='Produtos relacionados' link={verTodos} />
             {tags && (
               <nav className="tags-container">
