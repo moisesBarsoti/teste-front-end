@@ -1,4 +1,4 @@
 export interface TituloAzulType {
-    link: boolean | string;
+    link?: boolean;
     titulo: string;
 }

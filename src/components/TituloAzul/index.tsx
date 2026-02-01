@@ -11,7 +11,7 @@ export default function TituloAzul({link, titulo }: TituloAzulType) {
                 <div className="linha"></div>
             </div>
             {link && (
-                <div>
+                <div className="container-link">
                     <Link to="/produtos" className="link-ver-todos" title="Ver todos os produtos">Ver todos</Link>
                 </div>
             )}
