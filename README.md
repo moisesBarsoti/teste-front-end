@@ -139,11 +139,12 @@ http://localhost:5173
 Desenvolvedor de Software em formação - FIAP
 
 * GitHub: [https://github.com/moisesBarsoti](https://github.com/moisesBarsoti)
-* LinkedIn: [https://www.linkedin.com/in/moises-barsoti](https://www.linkedin.com/in/moises-barsoti)
+* LinkedIn: [https://www.linkedin.com/in/moises-barsoti](https://www.linkedin.com/in/mois%C3%A9s-barsoti-468869278/)
 
 ---
 
 ## 📄 Licença
 
 Este projeto foi desenvolvido exclusivamente para fins educacionais e avaliação técnica.
+
 
