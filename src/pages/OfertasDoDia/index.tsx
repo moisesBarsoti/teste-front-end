@@ -20,6 +20,8 @@ export default function OfertasDoDia() {
             <ContainerParceiros />
 
             <ContainerMarcas />
+            
+            <ProdutosRelacionados verTodos={true} tags={false} />
         </section>
     )
 }
