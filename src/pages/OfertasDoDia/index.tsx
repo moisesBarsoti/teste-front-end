@@ -2,6 +2,7 @@ import BannerBlackFriday from "../../components/BannerBlackFriday";
 import ProdutosRelacionados from "../../components/ProdutosRelacionados";
 import VitrineCategoria from "../../components/VitrineCategoria";
 import ContainerParceiros from "../../components/ContainerParceiros";
+import ContainerMarcas from "../../components/ContainerMarcas";
 
 export default function OfertasDoDia() {
     return (
@@ -17,6 +18,8 @@ export default function OfertasDoDia() {
             <ProdutosRelacionados verTodos={true} tags={false} />
             
             <ContainerParceiros />
+
+            <ContainerMarcas />
         </section>
     )
 }
