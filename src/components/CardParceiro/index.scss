@@ -1,11 +1,30 @@
 @import '../../variables.scss';
 
 .card-parceiro {
+  opacity: 0;
+  transition: 
+  opacity 0.8s ease,
+  transform 0.8s ease;
+  will-change: transform, opacity;
   position: relative;
   width: 634px;
   height: 350px;
   border-radius: 16px;
   overflow: hidden;
+  transition: .5s ease-in-out;
+
+  &.left {
+    transform: translateX(-40px);
+  }
+
+  &.right {
+    transform: translateX(40px);
+  }
+
+  &.ativo {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
   img {
     width: 100%;
