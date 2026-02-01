@@ -1,5 +1,71 @@
-@import "../../variables.scss";
+    @import "../../variables.scss";
 
-footer {
-    margin-top: 90px;
-}
+    footer {
+        margin-top: 90px;
+
+        .container-footer {
+            width: 100%;
+            background-color: $color-gray-F4F4F4;
+            padding: 42px 195px 42px 80px;
+            display: flex;
+            justify-content: space-between;
+
+            .container-logo {
+                figure {
+
+                    img {
+                        width: 144px;
+                        height: 48px;
+                    }
+
+                    figcaption {
+                        margin-top: 10px;
+                        margin-bottom: 27px;
+                        font-weight: 300;
+                        font-size: 14px;
+                        color: $color-black-3F3F40;
+                    }
+                }
+            }
+
+            .linha {
+                width: 1px;
+                background-color: $color-gray-2828282E;
+                margin: 0 40px;
+                min-height: 198px;
+            }
+
+            .container-conteudo {
+                ul.conteudo {
+                    display: flex;
+                    gap: 100px;
+                    li {
+                        h6 {
+                            font-weight: 700;
+                            font-size: 16px;
+                            color: $color-gray-222222B5;
+                            margin-bottom: 20px;
+                        }
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            li {
+                                .link-footer {
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    font-family: $font-work;
+                                    text-decoration: none;
+                                    color: $color-gray-222222B5;
+                                    transition: .5s;
+                                }
+        
+                                .link-footer:hover {
+                                    color: $color-black-000000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
