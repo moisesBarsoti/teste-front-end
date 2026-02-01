@@ -3,11 +3,13 @@ import Newsletter from "../Newsletter";
 import Logo from "../../assets/icons/Logo.svg";
 import RedesSociais from "../RedesSociais";
 import { Link } from "react-router-dom";
+import DireitosAutorais from "../DireitosAutorais";
 
 export default function Footer() {
     return (
         <footer>
             <Newsletter />
+        
             <div className="container-footer">
                 <div className="container-logo">
                     <figure>
@@ -86,6 +88,8 @@ export default function Footer() {
                     </ul>
                 </div>
             </div>
+
+            <DireitosAutorais />
         </footer>
     )
 }
