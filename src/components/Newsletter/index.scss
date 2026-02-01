@@ -1,0 +1,66 @@
+@import "../../variables.scss";
+
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $color-purple-271C47;
+    color: $color-white;
+    padding: 40px 82px 40px 80px;
+
+    .container-titulo {
+        h5 {
+            font-size: 32px;
+            font-family: $font-outfit;
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 14px;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        .container-inputs {
+            display: flex;
+            gap: 8px;
+
+            input {
+                padding: 11px 24px;
+                border-radius: 8px;
+                outline: none;
+            }
+
+            input::placeholder {
+                font-weight: 400;
+            }
+
+            button {
+                background-color: $color-yellow-F7CA11;
+                border-radius: 8px;
+                padding: 11px 40px;
+                font-weight: 600;
+                transition: .5s ease-in-out;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: darken($color-yellow-F7CA11, 5%);
+            }
+        }
+
+        .container-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            span {
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+
+    }
+}
