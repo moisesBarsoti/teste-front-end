@@ -1,18 +1,18 @@
-import Logo from "../../assets/icons/Logo.svg"; 
+import Logo from "../../assets/icons/Logo.svg";
 import MagnifyingGlass from "../../assets/icons/MagnifyingGlass.svg";
 import Caixa from "../../assets/icons/Caixa.svg";
 import Heart from "../../assets/icons/Heart.svg";
 import UserCircle from "../../assets/icons/UserCircle.svg";
 import ShoppingCart from "../../assets/icons/ShoppingCart.svg";
 import { Link } from "react-router-dom";
-import './index.scss';
+import "./index.scss";
 
 export default function MainHeader() {
   return (
     <div className="sectionLogo">
       <div className="sectionLogoContent">
-        <Link to="/">
-          <img src={Logo} alt="Logo Econverse" />
+        <Link to="/" aria-label="Ir para a página inicial">
+          <img src={Logo} alt="Econverse" />
         </Link>
 
         <div className="pesquisa-wrapper">
@@ -20,31 +20,43 @@ export default function MainHeader() {
             type="text"
             placeholder="O que você está buscando?"
             className="pesquisa-input"
-            aria-label="Campo de pesquisa"
+            aria-label="Buscar produtos"
           />
-          <button className="pesquisa-button" type="submit">
-            <img src={MagnifyingGlass} alt="Icone MagnifyingGlass" />
+
+          <button
+            className="pesquisa-button"
+            type="submit"
+            aria-label="Pesquisar"
+          >
+            <img src={MagnifyingGlass} alt="" aria-hidden="true" />
           </button>
         </div>
-        <ul>
+
+        <ul aria-label="Ações do usuário">
           <li>
-            <button title="Meus Pedidos">
-              <img src={Caixa} alt="Icone Caixa" />
+            <button aria-label="Meus pedidos" title="Meus pedidos">
+              <img src={Caixa} alt="" aria-hidden="true" />
             </button>
           </li>
+
           <li>
-            <button title="Lista de Desejos">
-              <img src={Heart} alt="Icone Heart" />
+            <button aria-label="Lista de desejos" title="Lista de desejos">
+              <img src={Heart} alt="" aria-hidden="true" />
             </button>
           </li>
+
           <li>
-            <button title="Minha Conta">
-              <img src={UserCircle} alt="Icone UserCircle" />
+            <button aria-label="Minha conta" title="Minha conta">
+              <img src={UserCircle} alt="" aria-hidden="true" />
             </button>
           </li>
+
           <li>
-            <button title="Carrinho de Compras">
-              <img src={ShoppingCart} alt="Icone ShoppingCart" />
+            <button
+              aria-label="Carrinho de compras"
+              title="Carrinho de compras"
+            >
+              <img src={ShoppingCart} alt="" aria-hidden="true" />
             </button>
           </li>
         </ul>
