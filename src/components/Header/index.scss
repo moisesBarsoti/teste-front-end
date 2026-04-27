@@ -1,0 +1,9 @@
+@import '../../styles/_variables';
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: $color-gray-9F9F9F;
+  background-color: $color-white;
+}
