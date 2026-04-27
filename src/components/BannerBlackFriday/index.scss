@@ -1,0 +1,121 @@
+@use '@/styles/variables.scss' as *;
+
+.banner-black-friday {
+  position: relative;
+  width: 100%;
+  min-height: 390px;
+  overflow: hidden;
+  font-family: $font-poppins;
+
+  img {
+    width: 100%;
+    height: 390px;
+    display: block;
+    object-fit: cover;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 0) 70%
+    );
+    pointer-events: none;
+  }
+
+  .content {
+    position: absolute;
+    top: 50%;
+    left: clamp(0px, 8vw, 81px);
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $color-white;
+    text-align: left;
+    max-width: 620px;
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    h2 {
+      font-size: clamp(1.25rem, 3vw, 2rem);
+      font-weight: 400;
+      line-height: 1;
+      margin-top: 1rem;
+
+      span {
+        color: $color-yellow-F7CA11;
+        font-weight: bold;
+      }
+    }
+
+    .btn-produto {
+      background-color: $color-yellow-F7CA11;
+      color: $color-black-000000;
+      padding: 13px 54px;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 5px;
+      margin-top: clamp(24px, 6vw, 60px);
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: darken($color-yellow-F7CA11, 10%);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    min-height: 340px;
+
+    img {
+      height: 340px;
+    }
+
+    &::before {
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.55) 60%,
+        rgba(0, 0, 0, 0.25) 100%
+      );
+    }
+
+    .content {
+      left: 24px;
+      right: 24px;
+      max-width: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    min-height: 300px;
+
+    img {
+      height: 300px;
+    }
+
+    .content {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      .btn-produto {
+        padding: 12px 32px;
+      }
+    }
+  }
+}
