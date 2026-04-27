@@ -1,0 +1,54 @@
+@import '../../styles/_variables';
+
+.sectionLogo {
+    width: 100%;
+    padding: 20px 0;
+
+    .sectionLogoContent {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .pesquisa-wrapper {
+      display: flex;
+      align-items: center;
+      background: $color-gray-F6F5F2;
+      border-radius: 10px;
+      padding: 8px 16px;
+      max-width: 630px;
+      width: 100%;
+      flex: 1;
+
+      .pesquisa-input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        outline: none;
+      }
+
+      .pesquisa-button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      border-bottom: none;
+      list-style: none;
+      flex-shrink: 0;
+
+      li button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    }
+}
