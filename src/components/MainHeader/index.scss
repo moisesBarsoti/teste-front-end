@@ -1,4 +1,4 @@
-@use '../../styles/_variables' as *;
+@use '@/styles/_variables' as *;
 
 .sectionLogo {
     width: 100%;
@@ -52,3 +52,45 @@
       }
     }
 }
+
+  @media (max-width: 1024px) {
+    .sectionLogoContent {
+      gap: 20px;
+    }
+
+    ul {
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sectionLogoContent {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .pesquisa-wrapper {
+      order: 3;
+      width: 100%;
+      max-width: 100%;
+      margin-top: 12px;
+    }
+
+    ul {
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    ul {
+      gap: 12px;
+    }
+
+    .pesquisa-wrapper {
+      padding: 6px 12px;
+    }
+
+    .pesquisa-input {
+      font-size: 14px;
+    }
+  }
