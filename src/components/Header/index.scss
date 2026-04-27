@@ -1,0 +1,17 @@
+@use '@/styles/_variables' as *;
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: $color-gray-9F9F9F;
+  padding: 0 80px;
+  margin-top: 6px;
+
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: $color-gray-F0F0F0;
+    margin: 6px 0px;
+  }
+}

@@ -1,0 +1,82 @@
+@use '@/styles/_variables' as *;
+
+nav {
+  border-top: 1px solid $color-gray-F0F0F0;
+  box-shadow: 2px 0 4px #3930131f;
+  overflow-x: auto;
+
+  ul {
+    display: flex;
+    padding: 10px 0;
+    white-space: nowrap;
+
+    li {
+      .link {
+        position: relative;
+        text-decoration: none;
+        color: $color-gray-9F9F9F;
+        transition: color 0.3s;
+        font-weight: 600;
+        flex-shrink: 0;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: $color-blue-3019B2;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          color: $color-blue-3019B2;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+
+        &-ativo {
+          color: $color-blue-3019B2;
+        }
+
+        figure {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+    ul {
+      justify-content: flex-start;
+      gap: 28px;
+      padding: 10px 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    ul {
+      gap: 24px;
+      padding: 12px 16px;
+    }
+
+    ul li .link {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    ul {
+      gap: 20px;
+    }
+
+    ul li .link {
+      font-size: 12px;
+    }
+  }
