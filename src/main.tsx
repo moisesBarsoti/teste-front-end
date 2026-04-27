@@ -3,12 +3,19 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import DailyDeals from './pages/DailyDeals/index.tsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <div>404</div>
+    errorElement: <div>404</div>,
+    children: [
+      {
+        path: '/',
+        element: <DailyDeals />
+      }
+    ]
   }
 ])
 
