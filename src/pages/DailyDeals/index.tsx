@@ -1,6 +1,7 @@
 import BannerBlackFriday from "../../components/BannerBlackFriday";
 import ContainerMark from "../../components/ContainerMark";
 import ContainerPartner from "../../components/ContainerPartner";
+import Newsletter from "../../components/Newsletter";
 import RelatedProducts from "../../components/RelatedProducts";
 import ShowcaseCategory from "../../components/ShowcaseCategory";
 
@@ -20,8 +21,10 @@ export default function DailyDeals() {
             <ContainerPartner />
 
             <ContainerMark />
-            
+
             <RelatedProducts tags seeAll/>
+
+            <Newsletter />
         </section>
     )
 }
