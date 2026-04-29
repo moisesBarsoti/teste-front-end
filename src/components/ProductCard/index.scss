@@ -1,4 +1,4 @@
-@import '@/style/variables.scss';
+@use '@/styles/_variables' as *;
 
 .product-card {
     margin-left: 10px;

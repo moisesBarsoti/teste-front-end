@@ -1,4 +1,5 @@
 import type { TagsTechnologyType } from "../../types/TagsTechnologyType";
+import "./index.scss";
 
 export default function TagsTechnology({isAtivo, onToggle, text, title}: TagsTechnologyType) {
   return (

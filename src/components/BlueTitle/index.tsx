@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import type { BlueTitleType } from "../../types/BlueTitleType";
-import "./style.css";
+import "./index.scss";
 
 export default function BlueTitle({link, title, line = true}: BlueTitleType) {
   return (

@@ -1,4 +1,5 @@
 import type { ProductCardType } from "../../types/ProductCardType";
+import "./index.scss";
 
 export default function ProductCard({product, image, originallValue, discountValue, quantityInstallments, installmentValue, onClickBuy}: ProductCardType) {
   return (

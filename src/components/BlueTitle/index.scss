@@ -1,4 +1,4 @@
-@import '@/styles/_variables.scss';
+@use '@/styles/_variables' as *;
 
 .container-title-blue {
     width: 100%;
@@ -6,6 +6,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    font-family: $font-poppins;
 
     .title-blue {
         display: flex;
