@@ -15,6 +15,9 @@ export default function DailyDeals() {
             <ContainerPartner />
 
             <RelatedProducts tags seeAll/>
+
+            <ContainerPartner />
+            <ContainerPartner />
         </section>
     )
 }
