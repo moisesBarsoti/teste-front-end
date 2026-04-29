@@ -11,6 +11,10 @@ footer {
     justify-content: space-between;
 
     .container-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      
       figure {
         img {
           width: 144px;
