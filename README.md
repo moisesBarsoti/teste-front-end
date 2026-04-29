@@ -3,7 +3,7 @@
 ### 1. Clone o repositório
 
 ```bash
-https://github.com/moisesBarsoti/teste-front-end.git
+git clone https://github.com/moisesBarsoti/teste-front-end.git
 ```
 
 ### 2. Abra a pasta
