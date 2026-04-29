@@ -1,0 +1,44 @@
+@import '@/styles/_variables.scss';
+
+.container-title-blue {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .title-blue {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+
+        h3 {
+            font-weight: 700;
+            font-size: 30px;
+            color: $color-blue-3442B5;
+        }
+
+        .line {
+            width: 360px;
+            height: 1px;
+            margin-top: -10px;
+            background-color: $color-gray-DEDEDE;
+        }
+
+    }
+
+    .container-link {
+        margin: 4px 0 24px 0;
+    }
+
+    .see-all-links {
+        font-weight: 700;
+        font-size: 15px;
+        color: $color-black-3F3F40;
+        text-decoration: none;
+    }
+
+    .see-all-links:hover {
+        text-decoration: underline;
+    }
+}
