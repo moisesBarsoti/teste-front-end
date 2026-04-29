@@ -1,4 +1,5 @@
 import BannerBlackFriday from "../../components/BannerBlackFriday";
+import ContainerPartner from "../../components/ContainerPartner";
 import RelatedProducts from "../../components/RelatedProducts";
 import ShowcaseCategory from "../../components/ShowcaseCategory";
 
@@ -10,6 +11,13 @@ export default function DailyDeals() {
             <ShowcaseCategory />
 
             <RelatedProducts tags />
+
+            <ContainerPartner />
+
+            <RelatedProducts tags seeAll/>
+
+            <ContainerPartner />
+            <ContainerPartner />
         </section>
     )
 }
