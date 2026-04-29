@@ -24,7 +24,6 @@ export default function DailyDeals() {
 
             <RelatedProducts tags seeAll/>
 
-            <Newsletter />
         </section>
     )
 }
